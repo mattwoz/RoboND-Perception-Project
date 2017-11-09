@@ -56,7 +56,25 @@ All three outputs are located in `/pr2_Robot/scripts/output_*.yaml`.  I was able
 Glue mis-identified as "soap" and "soap2" misidentified as glue.
 
 ### Wrap-Up
+Overall the model I generated for identification worked pretty well. The code established in the lab exercises 1-3 translated well into the project.  I did have change a few parameters and added an additional function to eliminate the side tables from the view of the pr2 robot.  
 
+To eliminate the side tables I simply added another passthrough filter in the Y direction as follows:
+```
+def passthrough_filter_y(cloud):
+    passthrough = cloud.make_passthrough_filter()
+    filter_axis = 'y'
+    passthrough.set_filter_field_name(filter_axis)
+    axis_min = -0.5
+    axis_max = 0.5
+    passthrough.set_filter_limits(axis_min, axis_max)
+    cloud_filtered = passthrough.filter()
+
+    return cloud_filtered
+```
+
+From the exercises to the project I also modified parameters used for clustering.  I found that the clustering tolerance needed to be lower than in the exercises (0.01 vs 0.02) and that both the max and min cluster sizes needed to increase to better identify the objects.
+
+I did not complete the challenge part of this project, but plan on continuing to refine this model and completing the pick and place operation in the future.  
 
 
 
