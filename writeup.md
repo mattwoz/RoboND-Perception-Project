@@ -9,7 +9,7 @@ The following are the results of completing voxel grid downsampling, a passthrou
 Objects isolated:
 ![exercise1-1](/objects.jpeg)
 
-Eliminated table:
+Isolated table (eliminated from passthrough filter):
 ![exercise1-1](/table.jpeg)
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 After applying filters and RANSAC plane segmentation clustering for segmentation was implemented to identify objects individually, ultimately to be able to train the model.  
