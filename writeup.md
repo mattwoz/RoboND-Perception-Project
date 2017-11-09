@@ -56,7 +56,7 @@ All three outputs are located in `/pr2_Robot/scripts/output_*.yaml`.  I was able
 Glue mis-identified as "soap" and "soap2" misidentified as glue.
 
 ### Wrap-Up
-Overall the model I generated for identification worked pretty well. The code established in the lab exercises 1-3 translated well into the project.  I did have change a few parameters and added an additional function to eliminate the side tables from the view of the pr2 robot.  
+Overall the model I generated for identification worked pretty well. The code established in the lab exercises 1-3 translated well into the project.  I did change a few parameters and added an additional function to eliminate the side tables from the view of the pr2 robot.  
 
 To eliminate the side tables I simply added another passthrough filter in the Y direction as follows:
 ```
